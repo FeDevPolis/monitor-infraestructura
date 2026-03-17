@@ -56,7 +56,7 @@ ROOT_URLCONF = 'monitor.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR / 'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -123,3 +123,5 @@ import pymongo
 
 MONGO_CLIENT = pymongo.MongoClient('mongodb://localhost:27017/')
 MONGO_DB = MONGO_CLIENT['monitor_infraestructura']
+
+CSRF_TRUSTED_ORIGINS = ['http://127.0.0.1:8000', 'http://localhost:8000']
