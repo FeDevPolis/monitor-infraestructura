@@ -2,6 +2,10 @@
 
 Panel web para monitorear el estado de servidores en tiempo real, desarrollado como proyecto de práctica con un stack moderno de tecnologías open source.
 
+## 🌐 Demo en vivo
+
+[https://monitor-infraestructura.onrender.com](https://monitor-infraestructura.onrender.com)
+
 ## 🚀 Tecnologías utilizadas
 
 | Tecnología | Rol |
@@ -9,11 +13,13 @@ Panel web para monitorear el estado de servidores en tiempo real, desarrollado c
 | Python 3.12 | Lenguaje principal |
 | Django 6 | Framework backend |
 | Django REST Framework | API REST |
-| MongoDB | Base de datos NoSQL |
+| MongoDB Atlas | Base de datos NoSQL en la nube |
 | JavaScript (Vanilla) | Frontend dinámico |
 | HTML5 + CSS3 | Interfaz de usuario |
 | Docker + docker-compose | Containerización |
 | Linux | Sistema operativo de los contenedores |
+| Gunicorn | Servidor WSGI de producción |
+| Whitenoise | Archivos estáticos en producción |
 
 ## ✨ Funcionalidades
 
