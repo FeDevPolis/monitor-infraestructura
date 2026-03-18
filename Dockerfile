@@ -11,6 +11,9 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copiar el resto del proyecto
 COPY . .
 
+# Recopilar archivos estáticos para producción
+RUN python manage.py collectstatic --noinput
+
 # Exponer el puerto
 EXPOSE 8000
 
