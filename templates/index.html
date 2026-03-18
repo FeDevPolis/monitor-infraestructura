@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Monitor de Infraestructura</title>
     <link rel="stylesheet" href="{% static 'css/monitor.css' %}">
+    <link rel="stylesheet" href="{% static 'css/chat.css' %}">
 </head>
 <body>
     <header>
@@ -43,6 +44,21 @@
             </tbody>
         </table>
     </div>
+
+    <!-- Burbuja de chat IA -->
+    <div class="chat-bubble" onclick="toggleChat()">🤖</div>
+
+    <div class="chat-panel" id="chat-panel">
+        <div class="chat-header">🤖 Asistente de Infraestructura</div>
+        <div class="chat-messages" id="chat-messages">
+            Hola! Soy tu asistente de infraestructura. ¿Querés que analice el estado actual de los servidores?
+        </div>
+        <div class="chat-footer">
+            <button id="btn-analizar" onclick="analizarInfraestructura()">Analizar servidores</button>
+        </div>
+    </div>
+
     <script src="{% static 'js/monitor.js' %}"></script>
+    <script src="{% static 'js/chat.js' %}"></script>
 </body>
 </html>
