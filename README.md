@@ -20,6 +20,7 @@ Panel web para monitorear el estado de servidores en tiempo real, desarrollado c
 | Linux | Sistema operativo de los contenedores |
 | Gunicorn | Servidor WSGI de producción |
 | Whitenoise | Archivos estáticos en producción |
+| Gemini API (Google) | Análisis de infraestructura con IA |
 
 ## ✨ Funcionalidades
 
@@ -28,6 +29,8 @@ Panel web para monitorear el estado de servidores en tiempo real, desarrollado c
 - Cambio de estado de servidores desde el panel (sin recargar la página)
 - API REST completa con endpoints GET, POST, PUT, PATCH y DELETE
 - Panel de administración integrado (Django Admin)
+- Asistente de IA integrado con Gemini API para análisis del estado de la infraestructura
+
 
 ## 📁 Estructura del proyecto
 ```
@@ -36,8 +39,12 @@ monitor-infraestructura/
 ├── servidores/       # App principal (modelos, vistas, API)
 ├── templates/        # HTML
 ├── static/
-│   ├── css/          # Estilos
-│   └── js/           # Lógica del frontend
+│   ├── css/
+│   │   ├── monitor.css       # Estilos principales
+│   │   └── chat.css          # Estilos del asistente IA
+│   └── js/
+│       ├── monitor.js        # Lógica del frontend
+│       └── chat.js           # Lógica del asistente IA
 ├── Dockerfile        # Imagen Docker de la app
 ├── docker-compose.yml # Orquestación de contenedores
 └── requirements.txt  # Dependencias Python
@@ -98,6 +105,7 @@ python manage.py runserver
 | PUT | /api/servidores/{id}/ | Actualiza un servidor |
 | PATCH | /api/servidores/{id}/ | Actualiza el estado |
 | DELETE | /api/servidores/{id}/ | Elimina un servidor |
+| POST | /api/analizar/ | Envía datos al asistente IA con Gemini |
 
 ## 👤 Autor
 
