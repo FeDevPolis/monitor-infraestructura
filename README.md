@@ -2,9 +2,21 @@
 
 Panel web para monitorear el estado de servidores en tiempo real, desarrollado como proyecto de práctica con un stack moderno de tecnologías open source.
 
+---
+
+## 🎯 Objetivo
+
+Este proyecto fue desarrollado como práctica para simular un sistema real de monitoreo de infraestructura, integrando backend, base de datos, frontend y despliegue en contenedores.
+
+El objetivo principal fue entender cómo se construye una aplicación completa que permita visualizar, gestionar y analizar el estado de servicios en un entorno centralizado.
+
+---
+
 ## 🌐 Demo en vivo
 
 [https://monitor-infraestructura.onrender.com](https://monitor-infraestructura.onrender.com)
+
+---
 
 ## 🚀 Tecnologías utilizadas
 
@@ -22,6 +34,18 @@ Panel web para monitorear el estado de servidores en tiempo real, desarrollado c
 | Whitenoise | Archivos estáticos en producción |
 | Gemini API (Google) | Análisis de infraestructura con IA |
 
+---
+
+## 🏗️ Arquitectura
+
+- Backend: Django + Django REST Framework  
+- Base de datos: MongoDB Atlas (NoSQL)  
+- Frontend: HTML + CSS + JavaScript  
+- Contenerización: Docker + Docker Compose  
+- Servidor: Gunicorn + Whitenoise  
+
+---
+
 ## ✨ Funcionalidades
 
 - Visualización en tiempo real del estado de servidores
@@ -31,6 +55,16 @@ Panel web para monitorear el estado de servidores en tiempo real, desarrollado c
 - Panel de administración integrado (Django Admin)
 - Asistente de IA integrado con Gemini API para análisis del estado de la infraestructura
 
+---
+
+## 🧠 Decisiones técnicas
+
+- Se utilizó MongoDB por su flexibilidad para manejar estructuras de datos dinámicas.  
+- Se implementó una API REST para desacoplar frontend y backend.  
+- Se utilizó Docker para garantizar portabilidad y consistencia del entorno.  
+- Se integró una API de IA (Gemini) para explorar análisis automatizado de datos.  
+
+---
 
 ## 📁 Estructura del proyecto
 ```
@@ -49,6 +83,8 @@ monitor-infraestructura/
 ├── docker-compose.yml # Orquestación de contenedores
 └── requirements.txt  # Dependencias Python
 ```
+
+---
 
 ## ⚙️ Instalación y uso
 
@@ -95,6 +131,8 @@ python manage.py runserver
 
 5. Entrá a http://localhost:8000
 
+---
+
 ## 📡 Endpoints de la API
 
 | Método | Endpoint | Descripción |
@@ -107,10 +145,14 @@ python manage.py runserver
 | DELETE | /api/servidores/{id}/ | Elimina un servidor |
 | POST | /api/analizar/ | Envía datos al asistente IA con Gemini |
 
+---
+
 ## 👤 Autor
 
 **Federico Poliseno**  
 [GitHub](https://github.com/FeDevPolis)
+
+---
 
 ## 📄 Licencia
 
