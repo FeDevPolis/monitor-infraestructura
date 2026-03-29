@@ -1,3 +1,10 @@
+![CI/CD](https://github.com/FeDevPolis/monitor-infraestructura/actions/workflows/ci.yml/badge.svg)
+![Python](https://img.shields.io/badge/Python-3.12-blue)
+![Django](https://img.shields.io/badge/Django-6.0-green)
+![MongoDB](https://img.shields.io/badge/MongoDB-Atlas-green)
+![Docker](https://img.shields.io/badge/Docker-ready-blue)
+![License](https://img.shields.io/badge/License-MIT-yellow)
+
 # 🖥️ Monitor de Infraestructura
 
 Panel web para monitorear el estado de servidores en tiempo real, desarrollado como proyecto de práctica con un stack moderno de tecnologías open source.
@@ -29,6 +36,7 @@ El objetivo principal fue entender cómo se construye una aplicación completa q
 | JavaScript (Vanilla) | Frontend dinámico |
 | HTML5 + CSS3 | Interfaz de usuario |
 | Docker + docker-compose | Containerización |
+| GitHub Actions | Pipeline CI/CD automatizado |
 | Linux | Sistema operativo de los contenedores |
 | Gunicorn | Servidor WSGI de producción |
 | Whitenoise | Archivos estáticos en producción |
@@ -53,6 +61,7 @@ El objetivo principal fue entender cómo se construye una aplicación completa q
 - Cambio de estado de servidores desde el panel (sin recargar la página)
 - API REST completa con endpoints GET, POST, PUT, PATCH y DELETE
 - Panel de administración integrado (Django Admin)
+- Pipeline CI/CD con GitHub Actions que verifica el proyecto automáticamente en cada push
 - Asistente de IA integrado con Gemini API para análisis del estado de la infraestructura
 
 ---
@@ -69,6 +78,9 @@ El objetivo principal fue entender cómo se construye una aplicación completa q
 ## 📁 Estructura del proyecto
 ```
 monitor-infraestructura/
+├── .github/
+│   └── workflows/
+│       └── ci.yml            # Pipeline CI/CD
 ├── monitor/          # Configuración del proyecto Django
 ├── servidores/       # App principal (modelos, vistas, API)
 ├── templates/        # HTML
@@ -130,6 +142,18 @@ python manage.py runserver
 ```
 
 5. Entrá a http://localhost:8000
+
+---
+
+## 🔐 Variables de entorno
+
+| Variable | Descripción |
+|---|---|
+| `SECRET_KEY` | Clave secreta de Django |
+| `DEBUG` | True o False |
+| `ALLOWED_HOSTS` | Hosts permitidos separados por coma |
+| `MONGO_URI` | URI de conexión a MongoDB Atlas |
+| `GEMINI_API_KEY` | API Key de Google Gemini |
 
 ---
 
