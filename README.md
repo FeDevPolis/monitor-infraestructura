@@ -50,7 +50,9 @@ El objetivo principal fue entender cómo se construye una aplicación completa q
 - Base de datos: MongoDB Atlas (NoSQL)  
 - Frontend: HTML + CSS + JavaScript  
 - Contenerización: Docker + Docker Compose  
-- Servidor: Gunicorn + Whitenoise  
+- Servidor: Gunicorn + Whitenoise
+- CI/CD: GitHub Actions  
+- Deploy: Render
 
 ---
 
